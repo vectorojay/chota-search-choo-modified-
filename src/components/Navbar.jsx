@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Search from "./Search";
 
 const Navbar = () => {
   return (
-    <nav className="text-cyan-500">
+    <nav className="flex justify-between text-cyan-500 mt-8">
+      <Search />
       <ul className="flex gap-6">
         <li>
           <Link to="/web">Web</Link>

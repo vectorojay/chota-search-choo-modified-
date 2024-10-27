@@ -8,7 +8,7 @@ const App = () => {
   const [darkMode, setDarkMode] = useState(false);
   return (
     <div className={darkMode ? "dark" : ""}>
-      <div className="dark:bg-gray-900 p-6">
+      <div className="dark:bg-gray-900 p-6 h-screen">
         <Router>
           <Header darkMode={darkMode} setDarkMode={setDarkMode} />
           <Results />

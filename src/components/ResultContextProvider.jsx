@@ -13,9 +13,14 @@ const ResultContextProvider = ({ children }) => {
 
     const res = await fetch(url, {
       method: "GET",
-      headers: { host },
+      headers: {
+        "x-rapidapi-key": "894b27832emsh20496688d5036b1p159465jsn2b9aa9d592ce",
+        // "x-rapidapi-host": baseURL.replace(/^https:\/\/|\/.*$/g, ""),
+        "x-rapidapi-host": host,
+      },
     }); //Step 1: Fetch data and store result in variable
     const results = await res.json(); //Step 2: Covert fetched result to json
+    console.log(results);
     setResults(results); //Step 3: Set state to the reults to update data
     setIsLoading(false);
   };
